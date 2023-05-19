@@ -4,8 +4,7 @@ from PIL import Image
 import numpy as np
 import torch
 import cv2
-from attacks.fog import fog_creator
-from attacks.snow import snow_creator, make_kernels
+
 
 def getImageTranform(resize = True, normalized = True):
     if resize:
