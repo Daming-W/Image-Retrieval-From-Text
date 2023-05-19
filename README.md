@@ -16,23 +16,27 @@ on few well-known classfication dataset.
 
 1: pip install -r requirements.txt
 
-
+*****
 image retrieval
+*****
 
-refer to clip_ir.py and kmeans_ir.py
+1: refer to clip_ir.py and kmeans_ir.py
 
-edit the correspoding arguments:
-    for CLIP-IR
-        i:      batch-size which stand for candidates images number
-        ii:     clip visual backbone type
-        iii:    similarity threshold to determine true/false
-        of course, and the datasets would be used to evalute or customized data path
+2: edit the correspoding arguments:
+
+for CLIP-IR
+
+    i:      batch-size which stand for candidates images number
+    ii:     clip visual backbone type
+    iii:    similarity threshold to determine true/false
+    of course, and the datasets would be used to evalute or customized data path
     
-   for Kmeans-IR
-        i:      BoF-size which indicate when building the Kmeans model, the number of samples feed in each cluster
-        ii:     Batch-size which is same as the above 
-        iii:    num-cluster which is the known number of retrievable labels
-        of course, and the datasets would be used to evalute or customized data path
+for Kmeans-IR
+
+    i:      BoF-size which indicate when building the Kmeans model, the number of samples feed in each cluster
+    ii:     Batch-size which is same as the above 
+    iii:    num-cluster which is the known number of retrievable labels
+    of course, and the datasets would be used to evalute or customized data path
 
 
 
