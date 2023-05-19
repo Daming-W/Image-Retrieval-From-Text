@@ -14,7 +14,9 @@ And in this study, two styled method would be compared and anlyzed based on expe
 on few well-known classfication dataset.
 #####
 
-1: pip install -r requirements.txt
+Preparations:
+        pip install -r requirements.txt
+        if tesing on cifar or voc2007, please read/download(can be done by torchvsion to make life easy) to dir: ./ciar10 or ./VOC2007
 
 *****
 image retrieval
