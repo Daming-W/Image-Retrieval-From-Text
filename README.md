@@ -1,5 +1,6 @@
 #####
 Cross-modality Image Retrieval from Text: old-fashioned or deep-learning
+-------------------------------------------------------------------------
 
 This research aims to apply multimodal method--CLIP to image retrieval task.
 By adopting the zero-shot ablity demonstrated by CLIP, the proposed novel pipeline could
@@ -14,15 +15,22 @@ And in this study, two styled method would be compared and anlyzed based on expe
 on few well-known classfication dataset.
 #####
 
+
+
+
 Preparations:
+--------------
 
         pip install -r requirements.txt
 
 if tesing on cifar or voc2007, please read/download(can be done by torchvsion to make life easy) to dir: ./ciar10 or ./VOC2007
 
-*****
+
+
+
 image retrieval
-*****
+-----------------
+
 
 1: refer to clip_ir.py and kmeans_ir.py
 
@@ -49,10 +57,11 @@ for Kmeans-IR
 Then all set and ready to go.
 
 
-****
+
+
 CAM Visualization for CLIP
 (zero-shot text-guided object localization tech)
-****
+-------------------------------------------------
 
 1: edit cam_vis.py arguments：image_folder_path;               vis_res_folder_path
 
