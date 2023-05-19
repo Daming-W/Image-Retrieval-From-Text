@@ -17,7 +17,8 @@ on few well-known classfication dataset.
 Preparations:
 
         pip install -r requirements.txt
-        if tesing on cifar or voc2007, please read/download(can be done by torchvsion to make life easy) to dir: ./ciar10 or ./VOC2007
+
+if tesing on cifar or voc2007, please read/download(can be done by torchvsion to make life easy) to dir: ./ciar10 or ./VOC2007
 
 *****
 image retrieval
@@ -29,18 +30,22 @@ image retrieval
 
 for CLIP-IR
 
-    i:      batch-size which stand for candidates images number
-    ii:     clip visual backbone type
-    iii:    similarity threshold to determine true/false
-    of course, and the datasets would be used to evalute or customized data path
+    #i:      batch-size which stand for candidates images number
+    #ii:     clip visual backbone type
+    #iii:    similarity threshold to determine true/false
+    #of course, and the datasets would be used to evalute or customized data path
+    
+    python clip_ir.py
     
 for Kmeans-IR
 
-    i:      BoF-size which indicate when building the Kmeans model, the number of samples feed in each cluster
-    ii:     Batch-size which is same as the above 
-    iii:    num-cluster which is the known number of retrievable labels
-    of course, and the datasets would be used to evalute or customized data path
-
+    #i:      BoF-size which indicate when building the Kmeans model, the number of samples feed in each cluster
+    #ii:     Batch-size which is same as the above 
+    #iii:    num-cluster which is the known number of retrievable labels
+    #of course, and the datasets would be used to evalute or customized data path
+    
+    python kmeans_ir.py
+    
 Then all set and ready to go.
 
 
