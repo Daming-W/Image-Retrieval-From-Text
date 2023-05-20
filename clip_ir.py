@@ -13,7 +13,6 @@ from torch.utils.data import Dataset, DataLoader
 from sklearn.metrics import precision_recall_fscore_support
 
 import clip_modified
-import utils.aslloss 
 from utils.model import getCLIP, getCAM
 from utils.preprocess import getImageTranform
 from utils.dataset import ImageNetDataset
