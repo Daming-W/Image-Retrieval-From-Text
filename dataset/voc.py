@@ -388,6 +388,8 @@ class Voc2007Classification(data.Dataset):
         # return (img, path), target
         if self.transform is None and self.target_transform is None:
             img = transforms.ToTensor()(img)
+            resize_t = transforms.Resize((224, 224))
+            img = resize_t(img)
         return img, target
 
     def __len__(self):
