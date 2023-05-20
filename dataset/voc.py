@@ -11,6 +11,7 @@ from PIL import Image
 import pickle
 import dataset.util
 from dataset.util import *
+from torchvision import transforms
 
 object_categories = ['aeroplane', 'bicycle', 'bird', 'boat',
                      'bottle', 'bus', 'car', 'cat', 'chair',
@@ -385,6 +386,8 @@ class Voc2007Classification(data.Dataset):
         #print(img.size())
         #print(path)
         # return (img, path), target
+        if self.transform is None and self.target_transform is None:
+            img = transforms.ToTensor()(img)
         return img, target
 
     def __len__(self):
