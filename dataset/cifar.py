@@ -22,7 +22,10 @@ def load_data(dataset_path, file_name , preprocess):
             # array->img and do preprocess
             image_array = images_array[i].transpose(1, 2, 0)
             image = Image.fromarray(image_array)
-            image = preprocess(image.convert('RGB'))
+            if preprocess!=None:
+                image = preprocess(image.convert('RGB'))
+            else:
+                image = transforms.ToTensor()(image)
             images.append(image)
         # images,labels : list of data
     return images, labels
