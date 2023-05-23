@@ -8,7 +8,7 @@ import time
 from utils.evaluation_tools import getHeatMap, getHeatMapNoBBox, getHeatMapOneBBox, MaskToBBox
 from utils.model import getCLIP, getCAM
 from utils.preprocess import getImageTranform
-from clip_modified import build_model
+#from clip_modified import build_model
 import cv2
 
 RESIZE = 1
