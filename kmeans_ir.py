@@ -240,22 +240,30 @@ def retrieval_kmeans_pca(args,image_query, label_index, kmeans_model):
     return results
 
 def kmeans_process(args, image_feature, labels_dict):
-    # Initialise Kmeans
-    kmeans = KMeans(n_clusters=args.num_clusters, random_state=0)
-    # fit data
-    kmeans.fit(image_feature)
-    # get centers of each cluster
-    centers = kmeans.cluster_centers_
-    # create a dict to store the center of each cluster
-    cluster_centers_dict = {}
-    for i in range(len(labels_dict)):
-        cluster_centers_dict[labels_dict[i]] = centers[i]
-    # print(cluster_centers_dict)
-    # show the lables of each image
-    number_counts = Counter(kmeans.labels_)
-    # for number, count in number_counts.items():
-    #     print(f"Number {number}: {count}")
-    return kmeans
+
+    models,sub,centers = [],[],[]
+    num,c = 0,0
+
+    for i in range(0, args.num_clusters):
+        model_i = KMeans(n_clusters=1)
+        models.append(model_i)
+    
+    for i in range(len(image_feature)):
+        img = image_feature[i].astype(np.float32)
+        sub.append(img)
+        num += 1
+        if num == args.BoF_size:
+            num = 0
+            sub = np.array(sub, dtype=np.float32)
+            models[c].fit(sub)
+            centers.append(models[c].cluster_centers_)
+            sub = []
+            c += 1
+    all_centroids = np.concatenate([centroid for centroid in centers], axis=0)
+    model = KMeans(n_clusters=args.num_clusters, init=all_centroids)
+    model.fit(image_feature)
+
+    return model
         
 
 ###########################
