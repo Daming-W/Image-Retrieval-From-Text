@@ -337,9 +337,9 @@ if __name__ == '__main__':
             
             args.num_clusters = 20
             args.dataset_path = '/root/autodl-tmp/clip_ir/VOC2007'
-            voc2017 = voc.Voc2007Classification(root=args.dataset_path, set='test', 
+            voc2007 = voc.Voc2007Classification(root=args.dataset_path, set='test', 
                                                 transform=None)
-            dataloader = DataLoader(voc2017,
+            dataloader = DataLoader(voc2007,
                                     batch_size=args.batch_size,
                                     num_workers=args.workers,
                                     shuffle=True)
@@ -350,7 +350,7 @@ if __name__ == '__main__':
             15: 'potted plant', 16: 'sheep', 17: 'sofa', 18: 'train', 19: 'tv monitor'}
             
             # get labeled images data with user input BoF size
-            image_list = get_BoF_data_voc(args,voc2017)
+            image_list = get_BoF_data_voc(args,voc2007)
 
         # get dataset and dataloader
         elif args.dataset == 'cifar' or args.dataset == 'cifar10':
