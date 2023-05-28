@@ -2,14 +2,19 @@
 Cross-modality Image Retrieval from Text: old-fashioned or deep-learning
 -------------------------------------------------------------------------
 
-This research aims to apply multimodal method--CLIP to image retrieval task.
+Retrieval tasks are typical applications in computer science, and the advancement of multimedia technology has brought new requirements for retrieval across different modalities. 
+This research project has constructed a two-stage clustering-based retrieval framework, as well as a deep learning-based retrieval algorithm using the CLIP model, 
+which demonstrates zero-shot ability in the multimodal domain. By employing two different styles of methods on classification datasets under various testing scenarios, 
+this work analyzes and demonstrates the differences and similarities in terms of performance, computational requirements, and application environments of the retrieval algorithms.
+
+Deep Learning method aims to apply multimodal method--CLIP to image retrieval task.
 By adopting the zero-shot ablity demonstrated by CLIP, the proposed novel pipeline could
 cope variant text input with different fine-grains. Besides, the Grad-CAM is introduced
 here to present CLIP's explainability, even further rough text-guided object localization.
 
-On the other side, the proposed traditional machine learning IR (image-retrieval) system
+The statistic-based machine learning IR (image-retrieval) system
 is combining SIFT/HOG/shape Histogram/PCA/Kmeans which is expected to present a good 
-retrieval performance when facing serveral natural image candidates.
+retrieval performance when facing serveral natural image candidates. And the overall framework is conbined two stages.
 
 And in this study, two styled method would be compared and anlyzed based on experiments taken
 on few well-known classfication dataset.
