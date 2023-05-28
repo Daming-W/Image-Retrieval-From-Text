@@ -28,7 +28,7 @@ Preparations:
 
         pip install -r requirements.txt
 
-if tesing on cifar or voc2007, please read/download(can be done by torchvsion to make life easy) to dir: ./ciar10 or ./VOC2007
+if tesing on cifar or voc2007, please read/download(or can be done by torchvsion) to dir: ./ciar10 or ./VOC2007
 
 
 
