@@ -75,3 +75,11 @@ CAM Visualization for CLIP
 3: follow the instruction and input image file name and the text want to retrieval
 
 4： the cam result image will save in cam_vis folder
+
+
+
+acknowledgement
+---------------------------------
+great thanks to the following works
+https://github.com/openai/CLIP.git
+https://github.com/aiiu-lab/CLIPCAM.git
